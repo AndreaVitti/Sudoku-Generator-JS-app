@@ -1,0 +1,26 @@
+.fullComponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px #000000 solid;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.fullComponent input {
+    color: #0086c4;
+    font-family: "Fascinate Inline", cursive;
+    font-size: 3rem;
+    text-align: center;
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.fullComponent input::-webkit-inner-spin-button,
+.fullComponent input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

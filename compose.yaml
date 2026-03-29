@@ -1,0 +1,6 @@
+services:
+  sudoku:
+    build: .
+    container_name: Sudoku
+    ports:
+      - 4205:80

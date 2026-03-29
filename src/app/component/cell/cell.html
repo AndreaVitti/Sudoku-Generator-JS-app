@@ -1,0 +1,6 @@
+<div class="fullComponent">
+    @if(isEmpty()){
+    <input #inputCell type="number" max="9" min="1" (input)="onInput($event)">
+    }
+    <span [textContent]="text()" [style.color]="color()" #value></span>
+</div>

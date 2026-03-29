@@ -1,0 +1,137 @@
+<div class="fullComponent">
+    <div class="background">
+        <div class="paperBackground">
+            <div class="paper">
+                <div class="paperSub"></div>
+            </div>
+        </div>
+    </div>
+    @if(loading()){
+    <div class="loading">
+        <span>Loading...</span>
+    </div>
+    }
+    @if(retry()){
+    <div class="menuCont">
+        <button class="menuBtn" (click)="onRetry()">Retry</button>
+    </div>
+    } @else {
+    <div class="menuCont">
+        <select class="difficulty" #difficulty>
+            <option value="20">Easy</option>
+            <option value="32">Medium</option>
+            <option value="44">Hard</option>
+            <option value="56">Very Hard</option>
+        </select>
+        <button class="menuBtn" (click)="generateSudoku()">Generate Sudoku</button>
+        @if(solutionAvail()){
+        <button class="menuBtn" (click)="getSolution()">Solution</button>
+        }
+    </div>
+    }
+    <div class="sudokuCont">
+        <div class="subgridLine"></div>
+        <div class="subgridLine"></div>
+        <div class="subgridLine"></div>
+        <div class="subgridLine"></div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+        <div>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+            <app-cell #cell></app-cell>
+        </div>
+    </div>
+</div>

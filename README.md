@@ -1,59 +1,42 @@
-# Sudoku
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+# Sudoku-Generator-JS-Application
 
-## Development server
+A web application capable of generating a unique random sudoku with varying levels of difficulty coded in JavaScript.
 
-To start a local development server, run:
 
-```bash
-ng serve
-```
+## Deployment
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+To deploy this project first install [git](https://git-scm.com/) and [Docker](https://www.docker.com/), then run the command git clone inside a folder of your choosing:
 
 ```bash
-ng generate component component-name
+git clone https://github.com/AndreaVitti/Sudoku-Generator-JS-app.git
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Open the cloned repo and find the folder containing the file **compose.yaml**: there open your terminal and run the following command:
 
 ```bash
-ng generate --help
+docker-compose up --build -d
 ```
+This will build the container for the application the just paste this url in your browser: http://localhost:4205
 
-## Building
+## Functions
+To start the application simply choose the difficulty through the drop down menu and simply click on the generate button.  
+There are currently 4 diffculties:
+- Easy: 61 hints
+- Medium: 49 hints 
+- Hard: 37 hints
+- Very hard: 25 hints
 
-To build the project run:
+Due to the nature of how the backtracking algorithm works in this repo sometimes a unique solution for the desidered difficulty might not be achieved within a certain amount of tries, in that case the program will simply ask you to retry ( this very hardly happens with diffculties below the very hard category).
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## How to play
+To play simply click an empty cell and select a number from 1 to 9 so that there will be no duplicates of that number in both its row and column and also in its 3x3 sub-grid.  
+To reveal the solution simply click the solution button:
+- 🟦 dark blue --> number not inserted
+- 🟥 red --> wrong number 
+- 🟩 green --> correct number
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+![Missing-image](screenshots/screenshot_solution.png)
+## Technologies used
+To create this project it has been used the Angular framework and to deploy it Docker.

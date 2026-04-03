@@ -12,7 +12,7 @@ To deploy this project first install [git](https://git-scm.com/) and [Docker](ht
 git clone https://github.com/AndreaVitti/Sudoku-Generator-JS-app.git
 ```
 
-Open the cloned repo and find the folder containing the file 'compose.yaml': there open your terminal and run the following command:
+Open the cloned repo and find the folder containing the file `compose.yaml`: there open your terminal and run the following command:
 
 ```bash
 docker-compose up --build -d
@@ -39,5 +39,5 @@ To reveal the solution simply click the solution button:
 
 ![Missing-image](screenshots/screenshot_solution.png)
 ## Technologies stack
-**Frontend**: Angular, Html, CSS
+**Frontend**: Angular, Html, CSS  
 **Deployment**: Docker 

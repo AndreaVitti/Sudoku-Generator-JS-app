@@ -17,7 +17,7 @@ Open the cloned repo and find the folder containing the file `compose.yaml`: the
 ```bash
 docker-compose up --build -d
 ```
-This will build the container for the application the just paste this url in your browser: http://localhost:4205
+This will build the container for the application, then just paste this url in your browser to start using the app: http://localhost:4205
 
 ## Functions
 To start the application simply choose the difficulty through the drop down menu and simply click on the generate button.  
